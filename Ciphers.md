@@ -47,10 +47,10 @@ final Base64 encoded text: `bWlzdA==`
 
 ## Note:
 
-Bytes	Bytes in final group        Padding required
-3       4	                        none	
-2       3	                        =	
-1       2	                        ==	
+Bytes	    Bytes in final group        Padding required
+3               4	                        none	
+2               3	                          =	
+1               2	                         ==	
 
 
 so for a 3 letter word, no padding is required. for a 4 letter word, `==` is required, and for a 5 letter word `=` is required.
@@ -103,5 +103,6 @@ S(18)   Y(24)   18+24=42---->16     Q
 T(19)   K(10)   19+10=29---->3      D
 
 Encoded Text: `WMQD`
+
 
 Formula for decoding: `P=(C−K)mod26`
